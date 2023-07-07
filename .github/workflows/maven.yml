@@ -38,9 +38,9 @@ jobs:
         ls -a
         
   deploy:
-    
+    needs: build
     runs-on: ubuntu-latest
     
     steps:
     - name: tomcat deploy
-      run: cp /home/runner/work/employee_registration/employee_registration/target/studentapp-2.2-SNAPSHOT.war /opt/tomcat/webapps
+      run: curl -v -u admin:admin -T /home/runner/work/employee_registration/employee_registration/target/studentapp-2.2-SNAPSHOT.war /opt/tomcat/webapps
