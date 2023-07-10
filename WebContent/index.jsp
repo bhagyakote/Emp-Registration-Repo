@@ -50,7 +50,7 @@ div.ex {
 					<td><input type="text" name="percent"/></td>
 				</tr>
 				<tr>
-					<td>Join Date</td>
+					<td>Joining Date</td>
 					<td><input type="text" name="yop"/></td>
 				</tr>
 			</table>
