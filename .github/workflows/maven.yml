@@ -36,5 +36,12 @@ jobs:
       run: |
         cd target
         ls -a
-        
+
+  deploy:
+      needs: build
+      runs-on: self-hosted
+
+      steps:
+      - name: tomcat deploy
+        run: cp /home/ubuntu/actions-runner/_work/employee_registration/employee_registration/target/studentapp-2.2-SNAPSHOT.war /opt/tomcat/webapps
 
