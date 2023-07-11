@@ -43,7 +43,7 @@ jobs:
 
       steps:
       - name: tomcat deploy
-        run: sudo cp /home/ubuntu/actions-runner/_work/employee_registration/employee_registration/target/studentapp-2.2-SNAPSHOT.war /opt/apache-tomcat-9.0.78/
+        run: sudo cp /home/ubuntu/actions-runner/_work/employee_registration/employee_registration/target/studentapp-2.2-SNAPSHOT.war /opt/tomcat/webapps
 
 
 
