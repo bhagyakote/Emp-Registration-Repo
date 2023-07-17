@@ -43,7 +43,7 @@ jobs:
 
       steps:
       - name: tomcat deploy
-        run: sudo cp /home/aishwarya/actions-runner/_work/employee_registration/employee_registration/target/*.war /opt/apache-tomcat-9.0.78/webapps
+        run: sudo cp /home/aishwarya/actions-runner/_work/employee_registration/employee_registration/target/*.war /opt/tomcat/webapps
 
 
 
