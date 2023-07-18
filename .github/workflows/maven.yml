@@ -45,7 +45,7 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: war file
-          path: /opt/tomcat/webapps
+          path: sudo /opt/tomcat/webapps
 
 
 
