@@ -30,9 +30,8 @@ jobs:
         ls -a
     
     - name: Build Artifact
-      uses: actions/upload-artifact@v3.1.2
+      uses: actions/upload-artifact@v3
       with:
-        # Artifact name
         name: war file
         path: /home/aishwarya/actions-runner/_work/employee_registration/employee_registration/target/employee_registration-2.2-SNAPSHOT.war
   
@@ -42,10 +41,11 @@ jobs:
       runs-on: self-hosted
 
       steps:
-      - name: tomcat deploy
-        run: sudo cp /home/aishwarya/actions-runner/_work/employee_registration/employee_registration/target/*.war /opt/tomcat/webapps
-
-
+      
+      - uses: actions/download-artifact@v3
+        with:
+          name: war file
+          path: /opt/tomcat/webapps
 
 
 
