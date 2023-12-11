@@ -31,7 +31,7 @@ jobs:
       with:
           name: war file
           path: sudo /opt/tomcat/webapps
-      
+    
 
   # deploy:
   #     needs: build
