@@ -21,22 +21,33 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
       
-
-  deploy:
-      needs: build
-      runs-on: self-hosted
-
-      steps:
-      - name: Build Artifact
-        uses: actions/upload-artifact@v3
-        with:
+    - name: Build Artifact
+      uses: actions/upload-artifact@v3
+      with:
           name: war file
           path: /home/fs-swapnil/actions-runner/_work/employee_registration/employee_registration/target/employee_registration-2.2-SNAPSHOT.war      
-      - name: Download Artifact
-        uses: actions/download-artifact@v3
-        with:
+    - name: Download Artifact
+      uses: actions/download-artifact@v3
+      with:
           name: war file
           path: sudo /opt/tomcat/webapps
+      
+
+  # deploy:
+  #     needs: build
+  #     runs-on: self-hosted
+
+      # steps:
+      # - name: Build Artifact
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: war file
+      #     path: /home/fs-swapnil/actions-runner/_work/employee_registration/employee_registration/target/employee_registration-2.2-SNAPSHOT.war      
+      # - name: Download Artifact
+      #   uses: actions/download-artifact@v3
+      #   with:
+      #     name: war file
+      #     path: sudo /opt/tomcat/webapps
 
 
 
