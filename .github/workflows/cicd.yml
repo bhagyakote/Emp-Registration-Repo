@@ -15,11 +15,11 @@ jobs:
            mvn -B package --file pom.xml
            pwd
       
-    # - name: Build Artifact
-    #   uses: actions/upload-artifact@v3
-    #   with:
-    #       name: war file
-    #       path: /home/fs-swapnil/actions-runner/_work/employee_registration/employee_registration/target/employee_registration-2.2-SNAPSHOT.war      
+    - name: Build Artifact
+      uses: actions/upload-artifact@v3
+      with:
+          name: war file
+          path: /home/runner/work/employee_registration/employee_registration/target/employee_registration-2.2-SNAPSHOT.war      
     
     # - name: Download Artifact
     #   uses: actions/download-artifact@v3
