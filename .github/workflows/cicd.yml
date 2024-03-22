@@ -7,6 +7,8 @@ on:
       type: environment
       default: staging
 
+
+
       
 
 
@@ -35,27 +37,27 @@ jobs:
 
 
     
-    - name: Download Artifact
-      uses: actions/download-artifact@v3
-      with:
-          name: war file
-          path: sudo /opt/tomcat/webapps
+  #   - name: Download Artifact
+  #     uses: actions/download-artifact@v3
+  #     with:
+  #         name: war file
+  #         path: sudo /opt/tomcat/webapps
     
 
-  deploy:
-      needs: build
-      runs-on: ubuntu-latest
+  # deploy:
+  #     needs: build
+  #     runs-on: ubuntu-latest
 
-      steps:
-      - name: Build Artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: war file
-          path: /home/fs-swapnil/actions-runner/_work/employee_registration/employee_registration/target/employee_registration-2.2-SNAPSHOT.war      
-      - name: Download Artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: war file
+  #     steps:
+  #     - name: Build Artifact
+  #       uses: actions/upload-artifact@v3
+  #       with:
+  #         name: war file
+  #         path: /home/fs-swapnil/actions-runner/_work/employee_registration/employee_registration/target/employee_registration-2.2-SNAPSHOT.war      
+  #     - name: Download Artifact
+  #       uses: actions/download-artifact@v3
+  #       with:
+  #         name: war file
 
 
 
