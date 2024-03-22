@@ -34,7 +34,7 @@ jobs:
 
   deploy:
       needs: build
-      runs-on: self-hosted
+      runs-on: ubuntu-latest
 
       steps:
       - name: Build Artifact
@@ -46,6 +46,8 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: war file
+
+
 
           
       #     path: sudo /opt/tomcat/webapps
