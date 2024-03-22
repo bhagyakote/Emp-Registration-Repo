@@ -1,5 +1,5 @@
 name: CI/CD
-# Executing YAML in multiple environment#
+#Executing YAML in multiple environments#
 run-name: 16-working wirh environments | env - $ {{inputs.target-env}}
 on: 
  workflow_dispatch:
@@ -65,7 +65,7 @@ jobs:
 
 
           
-          path: sudo /opt/tomcat/webapps
+          # path: sudo /opt/tomcat/webapps
 
 
 
