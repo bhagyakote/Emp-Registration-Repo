@@ -1,8 +1,15 @@
 name: CI/CD
+run-name: 16-working wirh environments | env - $ {{inputs.target-env}}
+on: 
+ workflow_dispatch:
+  inputs:
+    target_env:
+      type: environment
+      default: staging
 
-on:
-  push:
-    branches: [ "main" ]
+
+  # push:
+  #   branches: [ "main" ]
 
 
 jobs:
